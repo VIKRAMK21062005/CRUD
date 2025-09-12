@@ -26,11 +26,12 @@ npm install
 
 # Start server
 npm run dev
-
+```
 
 ---
 
 # Navigate to frontend folder
+```
 cd frontend
 
 # Install dependencies
@@ -38,7 +39,7 @@ npm install
 
 # Start frontend
 npm run dev
-
+```
 ---
 
 ## Tech Stack:
