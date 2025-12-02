@@ -1,9 +1,9 @@
-const mongoose=require("mongoose")
+import mongoose from 'mongoose';
 
-const UserSchema = new mongoose.Schema({
-    name:String,
-    email:String,
-    age:Number
+const userSchema = new mongoose.Schema({
+  name : String,
+  message : String,
+  date : { type: Date, default: Date.now }  
 })
 
-module.exports = mongoose.model("User",UserSchema)
+export default mongoose.model("User",userSchema);
