@@ -1,11 +1,12 @@
-import express from 'express';
-import { createUser, getUser, updateUser, deleteUser } from '../controllers/userController.js';
+import express from "express";
+import upload from "../middleware/upload.js";
+import { createUser, getUsers, updateUser, deleteUser } from "../controllers/userController.js";
 
 const router = express.Router();
 
-router.post('/', createUser);
-router.get('/', getUser);
-router.put('/:id', updateUser);
-router.delete('/:id', deleteUser);
+router.post("/", upload.single("image"), createUser);
+router.get("/", getUsers);
+router.put("/:id", updateUser);
+router.delete("/:id", deleteUser);
 
 export default router;
